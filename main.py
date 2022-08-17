@@ -29,7 +29,7 @@ with open('recipes.txt', encoding='utf-8') as file:
                             'measure': ingridient['measure'],
                             'quantity': (ingridient['quantity'] * person_count)
                         }
-                        if ingridient['ingredient_name'] in shop_list:
+                        if ingridient['ingredient_name'] in shop_list.keys():
                             quantity_unit['quantity'] += (ingridient['quantity'] * person_count)
                             shop_list[ingridient['ingredient_name']] = quantity_unit
                         else:
